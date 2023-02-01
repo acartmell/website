@@ -74,6 +74,8 @@ const docLinks = [
   }
 ]
 
+type RelativePos = "relative"
+
 const badgeStyle = {
   color: "#fff",
   backgroundColor: "#088413",
@@ -84,7 +86,7 @@ const badgeStyle = {
   borderRadius: 4,
   padding: "4px 6px",
   display: "inline-block",
-  position: "relative" as "relative",
+  position: "relative" as RelativePos,
   top: -2,
   marginLeft: 10,
   lineHeight: 1,

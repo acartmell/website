@@ -7,4 +7,4 @@
 # misc
 .cache
 .DS_Store
-.eslintrc.js
+src/gatsby-types.d.ts

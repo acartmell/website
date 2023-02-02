@@ -1,0 +1,117 @@
+@use "../styles/tokens" as *;
+@use "../styles/mixins/media";
+@use "../styles/mixins/typography" as *;
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  > * {
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../images/hero.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__dimmer {
+    background-color: rgba(233, 242, 249, 0.6);
+    width: 100%;
+    height: 100%;
+
+    .theme-dark & {
+      background-color: rgba(4, 22, 51, 0.75);
+    }
+  }
+
+  &__body {
+    width: calc(100% - (2 * $spacing-lg));
+    max-width: 800px;
+    text-align: center;
+
+    @include media.tablet {
+      width: calc(100% - (2 * $spacing-3l));
+    }
+  }
+
+  &__header {
+    @include font-size-3l;
+
+    margin-top: $spacing-3l;
+    color: $color-black;
+    font-family: $font-family-title;
+    line-height: $line-height-sm;
+    text-shadow: 2px 2px 1px $color-gray-80;
+
+    .theme-dark & {
+      color: $color-white;
+      text-shadow: 2px 2px 1px $color-black;
+    }
+  }
+
+  &__subheader {
+    @include font-size-sm;
+
+    margin: $spacing-3l auto 0;
+    color: $color-black;
+    font-family: $font-family-body;
+    line-height: $line-height-lg;
+    letter-spacing: $letter-spacing-lg;
+    text-shadow: 1px 1px 1px $color-gray-80;
+
+    strong {
+      color: $color-green-20;
+      font-weight: $font-weight-bold;
+    }
+
+    .theme-dark & {
+      color: $color-white;
+      text-shadow: 1px 1px 1px $color-black;
+
+      strong {
+        color: $color-green-80;
+      }
+    }
+  }
+
+  &__social {
+    margin-top: $spacing-4l;
+    margin-bottom: $spacing-3l;
+    display: flex;
+  }
+
+  &__social-link {
+    margin-left: $spacing-2l;
+    color: $color-black;
+    font-size: $font-size-2l;
+    transition: 250ms;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      color: $color-green-40;
+    }
+
+    .theme-dark & {
+      color: $color-white;
+
+      &:hover {
+        color: $color-green-80;
+      }
+    }
+  }
+}

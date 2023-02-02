@@ -1,0 +1,86 @@
+@use "../tokens";
+@use "./media";
+
+@mixin font-size-3l {
+  font-size: tokens.$font-size-3l;
+
+  @include media.tablet {
+    font-size: 64px;
+  }
+
+  @include media.desktop {
+    font-size: 90px;
+  }
+}
+
+@mixin font-size-2l {
+  font-size: tokens.$font-size-2l;
+
+  @include media.tablet {
+    font-size: tokens.$font-size-3l;
+  }
+
+  @include media.desktop {
+    font-size: 64px;
+  }
+}
+
+@mixin font-size-lg {
+  font-size: tokens.$font-size-lg;
+
+  @include media.tablet {
+    font-size: tokens.$font-size-2l;
+  }
+
+  @include media.desktop {
+    font-size: tokens.$font-size-3l;
+  }
+}
+
+@mixin font-size-md {
+  font-size: tokens.$font-size-md;
+
+  @include media.tablet {
+    font-size: tokens.$font-size-lg;
+  }
+
+  @include media.desktop {
+    font-size: tokens.$font-size-2l;
+  }
+}
+
+@mixin font-size-sm {
+  font-size: tokens.$font-size-sm;
+
+  @include media.tablet {
+    font-size: tokens.$font-size-md;
+  }
+
+  @include media.desktop {
+    font-size: tokens.$font-size-lg;
+  }
+}
+
+@mixin font-size-2s {
+  font-size: tokens.$font-size-2s;
+
+  @include media.tablet {
+    font-size: tokens.$font-size-sm;
+  }
+
+  @include media.desktop {
+    font-size: tokens.$font-size-md;
+  }
+}
+
+@mixin font-size-3s {
+  font-size: tokens.$font-size-3s;
+
+  @include media.tablet {
+    font-size: tokens.$font-size-2s;
+  }
+
+  @include media.desktop {
+    font-size: tokens.$font-size-sm;
+  }
+}

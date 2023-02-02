@@ -1,0 +1,9 @@
+@use "./reset";
+@use "../tokens";
+
+body {
+  color: tokens.$color-black;
+  font-family: tokens.$font-family-body;
+  font-size: tokens.$font-size-2s;
+  line-height: tokens.$line-height-sm;
+}

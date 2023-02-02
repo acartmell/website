@@ -1,0 +1,119 @@
+@use "../styles/tokens" as *;
+@use "../styles/mixins/media";
+@use "../styles/mixins/typography" as *;
+
+.about-section {
+  padding: $spacing-4l $spacing-3l;
+  background-color: $color-blue-90;
+
+  &__content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media.tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    width: 260px;
+    height: 260px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include media.tablet {
+      margin-right: $spacing-3l;
+    }
+  }
+
+  &__about {
+    margin-top: $spacing-2l;
+
+    @include media.tablet {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    @include font-size-md;
+
+    font-family: $font-family-title;
+  }
+
+  &__description {
+    @include font-size-3s;
+
+    margin-top: $spacing-md;
+    line-height: $line-height-lg;
+  }
+
+  &__contact-resume {
+    margin-top: $spacing-lg;
+    display: flex;
+    flex-direction: column;
+
+    @include media.desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__download-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: $spacing-3l;
+
+    @include media.desktop {
+      margin-top: 0;
+      justify-content: center;
+    }
+  }
+
+  &__download {
+    width: 100%;
+    padding: $spacing-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-md;
+    color: $color-black;
+    background-color: $color-gray-80;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 250ms;
+
+    > i {
+      margin-right: $spacing-md;
+      display: none;
+
+      @include media.phone {
+        display: inline;
+      }
+    }
+
+    &:hover {
+      background-color: $color-gray-60;
+    }
+
+    @include media.tablet {
+      width: auto;
+    }
+  }
+
+  .theme-dark & {
+    color: $color-gray-60;
+    background-color: $color-blue-20;
+  }
+}

@@ -12,12 +12,12 @@ function HeroSection() {
       </div>
       <div className={bem("body")}>
         <div className={bem("header")}>Hi, I&apos;m Alex.</div>
-        <div className={bem("subheader")}>
+        <p className={bem("subheader")}>
           I&apos;m a San Francisco-based <strong>Frontend Web Engineer</strong>{" "}
           with over 10 years of industry experience. I&apos;m currently working
           as a freelance developer, and am <strong>open</strong> to taking on
           new projects.
-        </div>
+        </p>
       </div>
       <div className={bem("social")}>
         <a className={bem("social-link")} href="mailto:acartmell@gmail.com">

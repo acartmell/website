@@ -71,7 +71,7 @@
     line-height: $line-height-lg;
     letter-spacing: $letter-spacing-lg;
 
-    strong {
+    > strong {
       color: $color-green-20;
       font-weight: $font-weight-bold;
     }

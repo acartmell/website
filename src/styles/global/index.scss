@@ -7,3 +7,16 @@ body {
   font-size: tokens.$font-size-2s;
   line-height: tokens.$line-height-sm;
 }
+
+a {
+  color: tokens.$color-green-40;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  .theme-dark & {
+    color: tokens.$color-green-80;
+  }
+}

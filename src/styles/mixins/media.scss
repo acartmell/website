@@ -1,5 +1,12 @@
-$breakpoint-tablet: 481px;
-$breakpoint-desktop: 769px;
+$breakpoint-phone: 361px;
+$breakpoint-tablet: 769px;
+$breakpoint-desktop: 1025px;
+
+@mixin phone {
+  @media only screen and (min-width: $breakpoint-phone) {
+    @content;
+  }
+}
 
 @mixin tablet {
   @media only screen and (min-width: $breakpoint-tablet) {

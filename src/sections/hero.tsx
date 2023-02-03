@@ -1,10 +1,10 @@
 import React from "react";
 import BEM from "bem-cn";
-import "./hero-section.scss";
+import "./hero.scss";
 
-const bem = BEM("hero-section");
+const bem = BEM("hero");
 
-function HeroSection() {
+function Hero() {
   return (
     <section className={bem()}>
       <div className={bem("image")}>
@@ -44,4 +44,4 @@ function HeroSection() {
   );
 }
 
-export default HeroSection;
+export default Hero;

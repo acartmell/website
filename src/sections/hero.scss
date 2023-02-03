@@ -2,7 +2,7 @@
 @use "../styles/mixins/media";
 @use "../styles/mixins/typography" as *;
 
-.hero-section {
+.hero {
   position: relative;
   width: 100%;
   min-height: 100vh; // Fallback for browsers that do not support Custom Properties

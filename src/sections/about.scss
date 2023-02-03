@@ -2,7 +2,7 @@
 @use "../styles/mixins/media";
 @use "../styles/mixins/typography" as *;
 
-.about-section {
+.about {
   padding: $spacing-4l $spacing-3l;
   background-color: $color-blue-90;
 
@@ -113,7 +113,7 @@
   }
 
   .theme-dark & {
-    color: $color-gray-60;
+    color: $color-gray-80;
     background-color: $color-blue-20;
   }
 }

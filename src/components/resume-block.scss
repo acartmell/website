@@ -1,0 +1,79 @@
+@use "../styles/tokens" as *;
+@use "../styles/mixins/media";
+@use "../styles/mixins/typography" as *;
+
+.resume-block {
+  margin-top: $spacing-3l;
+
+  &__name {
+    @include font-size-md;
+
+    font-family: $font-family-title;
+  }
+
+  &__city {
+    @include font-size-3s;
+
+    margin: $spacing-3s 0 $spacing-2s;
+    color: $color-gray-40;
+    font-family: $font-family-title;
+
+    .theme-dark & {
+      color: $color-gray-60;
+    }
+  }
+
+  &__jobspan {
+    @include font-size-3s;
+
+    margin-top: $spacing-sm;
+    font-family: $font-family-title;
+
+    > span {
+      display: block;
+
+      &.resume-block__sep {
+        display: none;
+      }
+    }
+
+    @include media.tablet {
+      margin-top: $spacing-3s;
+
+      > span {
+        display: inline;
+
+        &.resume-block__sep {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  &__sep {
+    margin: 0 $spacing-sm;
+  }
+
+  &__job-title {
+    font-style: italic;
+  }
+
+  &__description {
+    @include font-size-3s;
+
+    margin-top: $spacing-lg;
+    line-height: $line-height-md;
+
+    > p {
+      margin: $spacing-md 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

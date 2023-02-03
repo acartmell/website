@@ -1,0 +1,47 @@
+@use "../styles/tokens" as *;
+@use "../styles/mixins/media";
+@use "../styles/mixins/typography" as *;
+
+.skill-bar {
+  margin-top: $spacing-2l;
+
+  &__name {
+    @include font-size-sm;
+
+    font-family: $font-family-title;
+  }
+
+  &__bar {
+    height: 40px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: $spacing-md;
+    background-color: $color-gray-80;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .theme-dark & {
+      background-color: $color-gray-20;
+    }
+  }
+
+  &__fill {
+    height: 100%;
+    background-color: $color-gray-20;
+
+    .theme-dark & {
+      background-color: $color-gray-60;
+    }
+  }
+
+  &:first-child {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  @include media.desktop {
+    width: 50%;
+    margin-top: 0;
+    margin-left: $spacing-3l;
+  }
+}

@@ -79,8 +79,4 @@
   @include media.tablet {
     font-size: tokens.$font-size-2s;
   }
-
-  @include media.desktop {
-    font-size: tokens.$font-size-sm;
-  }
 }

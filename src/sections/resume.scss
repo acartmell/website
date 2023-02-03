@@ -1,0 +1,92 @@
+@use "../styles/tokens" as *;
+@use "../styles/mixins/media";
+@use "../styles/mixins/typography" as *;
+
+.resume {
+  padding: $spacing-4l $spacing-3l;
+  background-color: $color-white;
+
+  &__content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-3l 0;
+    border-top: 1px solid $color-gray-80;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    @include media.tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__section-title {
+    @include font-size-sm;
+
+    flex-shrink: 0;
+
+    > span {
+      padding-bottom: $spacing-2s;
+      display: inline-block;
+      border-bottom: 2px solid $color-green-40;
+      font-family: $font-family-title;
+      text-transform: uppercase;
+      letter-spacing: $letter-spacing-lg;
+
+      .theme-dark & {
+        border-bottom-color: $color-green-60;
+      }
+    }
+
+    @include media.tablet {
+      width: 180px;
+    }
+
+    @include media.desktop {
+      width: 308px;
+    }
+  }
+
+  &__section-content {
+    margin-top: $spacing-lg;
+    flex-grow: 1;
+
+    @include media.tablet {
+      margin-top: 0;
+    }
+  }
+
+  &__skill-row {
+    margin-top: $spacing-2l;
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      margin-top: $spacing-2s;
+    }
+
+    @include media.desktop {
+      flex-direction: row;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .theme-dark & {
+    color: $color-gray-80;
+    background-color: $color-black;
+  }
+}

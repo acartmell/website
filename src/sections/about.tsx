@@ -1,10 +1,10 @@
 import React from "react";
 import BEM from "bem-cn";
-import "./about-section.scss";
+import "./about.scss";
 
-const bem = BEM("about-section");
+const bem = BEM("about");
 
-function AboutSection() {
+function About() {
   return (
     <section className={bem()}>
       <div className={bem("content")}>
@@ -54,4 +54,4 @@ function AboutSection() {
   );
 }
 
-export default AboutSection;
+export default About;

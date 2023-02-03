@@ -1,34 +1,44 @@
 import { useState, useEffect } from "react";
 
+function isSupported() {
+  return (
+    typeof window !== "undefined" && typeof window.matchMedia === "function"
+  );
+}
+
 function useSystemTheme() {
-  if (typeof window === "undefined") {
+  const systemThemeMatch = isSupported()
+    ? window.matchMedia("(prefers-color-scheme: dark)")
+    : null;
+
+  useEffect(() => {
+    if (
+      systemThemeMatch &&
+      typeof systemThemeMatch.addEventListener === "function"
+    ) {
+      const handleChange = (event: MediaQueryListEvent) => {
+        setTheme(event.matches ? "dark" : "light");
+      };
+      systemThemeMatch.addEventListener("change", handleChange);
+
+      return () => {
+        systemThemeMatch.removeEventListener("change", handleChange);
+      };
+    } else {
+      return () => {};
+    }
+  }, [systemThemeMatch]);
+
+  if (!isSupported()) {
     return "light";
   }
 
   const [theme, setTheme] = useState<"light" | "dark">(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
+    if (systemThemeMatch?.matches) {
       return "dark";
     }
     return "light";
   });
-
-  useEffect(() => {
-    const handleChange = (event: MediaQueryListEvent) => {
-      setTheme(event.matches ? "dark" : "light");
-    };
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", handleChange);
-
-    return () => {
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .removeEventListener("change", handleChange);
-    };
-  }, []);
 
   return theme;
 }

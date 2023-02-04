@@ -86,10 +86,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: $font-size-md;
-    color: $color-black;
-    background-color: $color-gray-80;
-    border: 0;
+    font-size: $font-size-sm;
+    color: $color-gray-20;
+    background-color: transparent;
+    border: 1px solid $color-gray-20;
     border-radius: 4px;
     cursor: pointer;
     transition: 250ms;
@@ -104,11 +104,20 @@
     }
 
     &:hover {
-      background-color: $color-gray-60;
+      background-color: $color-gray-80;
     }
 
     @include media.tablet {
       width: auto;
+    }
+
+    .theme-dark & {
+      color: $color-gray-80;
+      border-color: $color-gray-80;
+
+      &:hover {
+        background-color: $color-gray-20;
+      }
     }
   }
 

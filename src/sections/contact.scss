@@ -1,0 +1,135 @@
+@use "../styles/tokens" as *;
+// @use "../styles/mixins/media";
+@use "../styles/mixins/typography" as *;
+
+.contact {
+  padding: $spacing-4l $spacing-3l;
+  background-color: $color-blue-90;
+
+  &__content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include font-size-lg;
+
+    font-family: $font-family-title;
+  }
+
+  &__description {
+    @include font-size-3s;
+
+    margin-top: $spacing-lg;
+    line-height: $line-height-lg;
+  }
+
+  &__success-area {
+    margin-top: $spacing-3l;
+    display: flex;
+    align-items: center;
+    color: $color-green-20;
+
+    .theme-dark & {
+      color: $color-green-60;
+    }
+  }
+
+  &__success-icon {
+    margin-right: $spacing-sm;
+    font-size: $font-size-lg;
+  }
+
+  &__success-message {
+    @include font-size-sm;
+
+    font-family: $font-family-title;
+
+    > i {
+      margin-right: $spacing-2s;
+    }
+  }
+
+  &__form {
+    margin-top: $spacing-lg;
+  }
+
+  &__input-row {
+    margin-top: $spacing-md;
+  }
+
+  &__label {
+    @include font-size-3s;
+
+    display: block;
+    font-family: $font-family-title;
+  }
+
+  &__input {
+    @include font-size-3s;
+
+    width: calc(100% - (2 * $spacing-sm));
+    margin-top: $spacing-3s;
+    padding: $spacing-sm;
+    font-family: $font-family-title;
+    color: $color-black;
+    background-color: $color-white;
+    border: 1px solid $color-green-20;
+    border-radius: 4px;
+
+    .theme-dark & {
+      background-color: $color-gray-60;
+      border-color: $color-gray-80;
+    }
+  }
+
+  &__error {
+    @include font-size-3s;
+
+    color: $color-red;
+    font-family: $font-family-title;
+  }
+
+  &__submit {
+    @include font-size-3s;
+
+    margin-top: $spacing-lg;
+    padding: $spacing-sm $spacing-3l;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    background-color: $color-green-20;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 250ms;
+
+    &:hover {
+      background-color: $color-green-40;
+    }
+
+    &.contact__submit_loading {
+      background-color: $color-gray-40;
+      cursor: progress;
+
+      i {
+        animation: rotation 1s infinite linear;
+      }
+    }
+
+    .theme-dark & {
+      color: $color-black;
+      background-color: $color-green-60;
+
+      &:hover {
+        background-color: $color-green-80;
+      }
+    }
+  }
+
+  .theme-dark & {
+    color: $color-gray-80;
+    background-color: $color-blue-20;
+  }
+}

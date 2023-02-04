@@ -37,8 +37,12 @@ function Resume() {
               city="New York, NY"
               jobSpans={[
                 {
+                  job: "Staff Frontend Engineer",
+                  timespan: "Jan 2022 - Jan 2023",
+                },
+                {
                   job: "Senior Frontend Engineer",
-                  timespan: "Jun 2020 - Jan 2023",
+                  timespan: "Jun 2020 - Jan 2022",
                 },
                 { job: "Full Stack Engineer", timespan: "Nov 2017 - Jun 2020" },
               ]}

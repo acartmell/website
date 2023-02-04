@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import useSystemTheme from "../hooks/use-system-theme";
 import useViewportHeight from "../hooks/use-viewport-height";
+import Footer from "./footer";
 import "./page.scss";
 
 interface Props {
@@ -12,7 +13,12 @@ function Page(props: Props) {
   const theme = useSystemTheme();
   useViewportHeight();
 
-  return <main className={`theme-${theme}`}>{children}</main>;
+  return (
+    <div className={`theme-${theme}`}>
+      <main>{children}</main>
+      <Footer />
+    </div>
+  );
 }
 
 export default Page;

@@ -1,0 +1,42 @@
+@use "../styles/tokens" as *;
+// @use "../styles/mixins/media";
+@use "../styles/mixins/typography" as *;
+
+.footer {
+  padding: $spacing-lg;
+  color: $color-gray-20;
+  background-color: $color-gray-90;
+  text-align: center;
+
+  &__social-link {
+    @include font-size-2s;
+
+    margin-left: $spacing-lg;
+    color: $color-gray-20;
+    transition: 250ms;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      color: $color-green-40;
+    }
+
+    .theme-dark & {
+      &:hover {
+        color: $color-green-80;
+      }
+    }
+  }
+
+  &__legal {
+    @include font-size-3s;
+
+    margin-top: $spacing-sm;
+
+    > .footer__emoji {
+      margin-left: $spacing-4s;
+    }
+  }
+}

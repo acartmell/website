@@ -7,7 +7,7 @@
   background-color: $color-white;
 
   &__content {
-    max-width: 1000px;
+    max-width: 920px;
     margin: 0 auto;
   }
 
@@ -50,11 +50,11 @@
     }
 
     @include media.tablet {
-      width: 180px;
+      width: 248px;
     }
 
     @include media.desktop {
-      width: 308px;
+      width: 298px;
     }
   }
 
@@ -76,8 +76,9 @@
       margin-top: $spacing-2s;
     }
 
-    @include media.desktop {
+    @include media.tablet {
       flex-direction: row;
+      align-items: flex-end;
 
       &:first-child {
         margin-top: 0;

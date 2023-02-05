@@ -1,5 +1,6 @@
 import React from "react";
 import BEM from "bem-cn";
+import headshot from "../images/headshot.jpg";
 import "./about.scss";
 
 const bem = BEM("about");
@@ -9,7 +10,7 @@ function About() {
     <section className={bem()}>
       <div className={bem("content")}>
         <div className={bem("image")}>
-          <img src="/headshot.JPG" alt="Headshot" />
+          <img src={headshot} alt="Headshot" />
         </div>
         <div>
           <div className={bem("about")}>

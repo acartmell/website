@@ -7,38 +7,30 @@ function isSupported() {
 }
 
 function useSystemTheme() {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
   const systemThemeMatch = isSupported()
     ? window.matchMedia("(prefers-color-scheme: dark)")
     : null;
 
   useEffect(() => {
-    if (
-      systemThemeMatch &&
-      typeof systemThemeMatch.addEventListener === "function"
-    ) {
-      const handleChange = (event: MediaQueryListEvent) => {
-        setTheme(event.matches ? "dark" : "light");
-      };
-      systemThemeMatch.addEventListener("change", handleChange);
+    if (systemThemeMatch) {
+      setTheme(systemThemeMatch.matches ? "dark" : "light");
 
-      return () => {
-        systemThemeMatch.removeEventListener("change", handleChange);
-      };
-    } else {
-      return () => {};
+      if (typeof systemThemeMatch.addEventListener === "function") {
+        const handleChange = (event: MediaQueryListEvent) => {
+          setTheme(event.matches ? "dark" : "light");
+        };
+        systemThemeMatch.addEventListener("change", handleChange);
+
+        return () => {
+          systemThemeMatch.removeEventListener("change", handleChange);
+        };
+      }
     }
+
+    return () => {};
   }, [systemThemeMatch]);
-
-  if (!isSupported()) {
-    return "light";
-  }
-
-  const [theme, setTheme] = useState<"light" | "dark">(() => {
-    if (systemThemeMatch?.matches) {
-      return "dark";
-    }
-    return "light";
-  });
 
   return theme;
 }

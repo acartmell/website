@@ -3,24 +3,18 @@
 @use "../styles/mixins/typography" as *;
 
 .footer {
-  padding: $spacing-lg;
+  padding: $spacing-md;
   color: $color-gray-20;
   background-color: $color-gray-90;
   text-align: center;
 
-  &__social-link {
-    @include font-size-2s;
-
-    margin-left: $spacing-lg;
-    color: $color-gray-20;
+  a {
+    color: inherit;
     transition: 250ms;
-
-    &:first-child {
-      margin-left: 0;
-    }
 
     &:hover {
       color: $color-green-40;
+      text-decoration: none;
     }
 
     .theme-dark & {
@@ -30,13 +24,38 @@
     }
   }
 
+  &__social-link {
+    @include font-size-2s;
+
+    margin-left: $spacing-lg;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__info {
+    @include font-size-3s;
+
+    margin-top: $spacing-md;
+  }
+
   &__legal {
     @include font-size-3s;
 
-    margin-top: $spacing-sm;
+    margin-top: $spacing-md;
 
     > .footer__emoji {
       margin-left: $spacing-4s;
+    }
+  }
+
+  .theme-dark & {
+    color: $color-gray-80;
+    background-color: $color-gray-20;
+
+    a {
+      color: inherit;
     }
   }
 }

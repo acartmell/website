@@ -28,6 +28,33 @@ function Footer() {
           <i className="fa-brands fa-github"></i>
         </a>
       </div>
+      <div className={bem("info")}>
+        This website was built using{" "}
+        <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+          React
+        </a>
+        ,{" "}
+        <a
+          href="https://www.typescriptlang.org/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          TypeScript
+        </a>
+        ,{" "}
+        <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
+          Sass
+        </a>
+        , and{" "}
+        <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
+          Gatsby
+        </a>
+        , and is hosted by{" "}
+        <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">
+          Netlify
+        </a>
+        .
+      </div>
       <div className={bem("legal")}>
         © 2023 Alex Cartmell <span className={bem("emoji")}>🌁</span>
       </div>

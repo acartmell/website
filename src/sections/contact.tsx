@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { ForwardedRef, useState, forwardRef } from "react";
 import BEM from "bem-cn";
 import "./contact.scss";
 
 const bem = BEM("contact");
 
-function Contact() {
+interface Props {}
+
+function Contact(_: Props, ref: ForwardedRef<HTMLElement>) {
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [messageInput, setMessageInput] = useState("");
@@ -77,7 +79,7 @@ function Contact() {
   };
 
   return (
-    <section className={bem()}>
+    <section ref={ref} className={bem()}>
       <div className={bem("content")}>
         <div className={bem("title")}>Get in Touch</div>
         <div className={bem("description")}>
@@ -159,4 +161,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default forwardRef(Contact);

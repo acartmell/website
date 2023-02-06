@@ -1,11 +1,11 @@
 @use "../styles/tokens" as *;
-// @use "../styles/mixins/media";
 @use "../styles/mixins/typography" as *;
 
 .footer {
   padding: $spacing-md;
   color: $color-gray-20;
-  background-color: $color-gray-90;
+  background-color: $color-gray-95;
+  border-top: 1px solid $color-gray-90;
   text-align: center;
 
   a {

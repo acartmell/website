@@ -1,13 +1,15 @@
-import React from "react";
+import React, { ForwardedRef, forwardRef } from "react";
 import BEM from "bem-cn";
 import headshot from "../images/headshot.jpg";
 import "./about.scss";
 
 const bem = BEM("about");
 
-function About() {
+interface Props {}
+
+function About(_: Props, ref: ForwardedRef<HTMLElement>) {
   return (
-    <section className={bem()}>
+    <section ref={ref} className={bem()}>
       <div className={bem("content")}>
         <div className={bem("image")}>
           <img src={headshot} alt="Headshot" />
@@ -55,4 +57,4 @@ function About() {
   );
 }
 
-export default About;
+export default forwardRef(About);

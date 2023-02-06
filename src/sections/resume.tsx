@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ForwardedRef, forwardRef } from "react";
 import BEM from "bem-cn";
 import ResumeBlock from "../components/resume-block";
 import SkillBar from "../components/skill-bar";
@@ -6,9 +6,11 @@ import "./resume.scss";
 
 const bem = BEM("resume");
 
-function Resume() {
+interface Props {}
+
+function Resume(_: Props, ref: ForwardedRef<HTMLElement>) {
   return (
-    <section className={bem()}>
+    <section ref={ref} className={bem()}>
       <div className={bem("content")}>
         <div className={bem("section")}>
           <div className={bem("section-title")}>
@@ -159,4 +161,4 @@ function Resume() {
   );
 }
 
-export default Resume;
+export default forwardRef(Resume);

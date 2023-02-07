@@ -81,7 +81,7 @@ function Contact(_: Props, ref: ForwardedRef<HTMLElement>) {
   return (
     <section ref={ref} className={bem()}>
       <div className={bem("content")}>
-        <div className={bem("title")}>Get in Touch</div>
+        <h2 className={bem("title")}>Get in Touch</h2>
         <div className={bem("description")}>
           Interested in working together? Have a question? Feel free to use the
           form below, or email me directly at{" "}

@@ -13,9 +13,9 @@ function Resume(_: Props, ref: ForwardedRef<HTMLElement>) {
     <section ref={ref} className={bem()}>
       <div className={bem("content")}>
         <div className={bem("section")}>
-          <div className={bem("section-title")}>
+          <h4 className={bem("section-title")}>
             <span>Education</span>
-          </div>
+          </h4>
           <div className={bem("section-content")}>
             <ResumeBlock
               name="University of Washington"
@@ -30,9 +30,9 @@ function Resume(_: Props, ref: ForwardedRef<HTMLElement>) {
           </div>
         </div>
         <div className={bem("section")}>
-          <div className={bem("section-title")}>
+          <h4 className={bem("section-title")}>
             <span>Work</span>
-          </div>
+          </h4>
           <div className={bem("section-content")}>
             <ResumeBlock
               name="WeWork"
@@ -130,9 +130,9 @@ function Resume(_: Props, ref: ForwardedRef<HTMLElement>) {
           </div>
         </div>
         <div className={bem("section")}>
-          <div className={bem("section-title")}>
+          <h4 className={bem("section-title")}>
             <span>Skills</span>
-          </div>
+          </h4>
           <div className={bem("section-content")}>
             <div className={bem("skill-row")}>
               <SkillBar name="HTML/CSS" rating={98} />

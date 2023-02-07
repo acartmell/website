@@ -24,7 +24,7 @@ function SkillBar(props: Props) {
 
   return (
     <div className={bem()}>
-      <div className={bem("name")}>{name}</div>
+      <h4 className={bem("name")}>{name}</h4>
       <div className={bem("bar")}>
         <div
           className={bem("fill")}

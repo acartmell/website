@@ -1,5 +1,6 @@
 import React from "react";
 import favicon from "../images/favicon.ico";
+import headshot from "../images/headshot.jpg";
 
 interface Props {
   title: string;
@@ -11,6 +12,17 @@ function PageHead(props: Props) {
   return (
     <>
       <title>{title}</title>
+      <meta name="og:title" content={title} />
+      <meta name="og:url" content="https://www.alexcartmell.com" />
+      <meta
+        name="description"
+        content="Frontend web engineer with over 10 years of industry experience. Currently working as a freelance developer, and open to taking on new projects."
+      />
+      <meta
+        name="og:description"
+        content="Frontend web engineer with over 10 years of industry experience. Currently working as a freelance developer, and open to taking on new projects."
+      />
+      <meta name="og:image" content={headshot} />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link rel="icon" type="image/x-icon" href={favicon}></link>

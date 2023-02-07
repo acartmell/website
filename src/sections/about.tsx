@@ -12,11 +12,11 @@ function About(_: Props, ref: ForwardedRef<HTMLElement>) {
     <section ref={ref} className={bem()}>
       <div className={bem("content")}>
         <div className={bem("image")}>
-          <img src={headshot} alt="Headshot" />
+          <img src={headshot} alt="Alex Cartmell" />
         </div>
         <div>
           <div className={bem("about")}>
-            <div className={bem("title")}>About Me</div>
+            <h3 className={bem("title")}>About Me</h3>
             <p className={bem("description")}>
               I am a detail-oriented frontend web developer with over a decade
               of experience building beautiful and performant websites, ranging
@@ -29,7 +29,7 @@ function About(_: Props, ref: ForwardedRef<HTMLElement>) {
           </div>
           <div className={bem("contact-resume")}>
             <div>
-              <div className={bem("title")}>Contact Info</div>
+              <h3 className={bem("title")}>Contact Info</h3>
               <div className={bem("description")}>
                 <p>Alex Cartmell</p>
                 <p>San Francisco, California</p>

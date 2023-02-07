@@ -17,7 +17,7 @@ function Hero(props: Props) {
         <div className={bem("dimmer")}></div>
       </div>
       <div className={bem("body")}>
-        <div className={bem("header")}>Hi, I&apos;m Alex.</div>
+        <h1 className={bem("header")}>Hi, I&apos;m Alex.</h1>
         <p className={bem("subheader")}>
           I&apos;m a San Francisco-based <strong>Frontend Web Engineer</strong>{" "}
           with over 10 years of industry experience. I&apos;m currently working

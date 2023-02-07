@@ -21,7 +21,7 @@ function ResumeBlock(props: Props) {
 
   return (
     <div className={bem()}>
-      <div className={bem("name")}>{name}</div>
+      <h3 className={bem("name")}>{name}</h3>
       <div className={bem("city")}>{city}</div>
       {jobSpans.map((jobspan) => (
         <div key={jobspan.job} className={bem("jobspan")}>

@@ -38,7 +38,7 @@ function IndexPage() {
   return (
     <ErrorBoundary>
       <Page onNavLinkClick={handleNavLinkClick}>
-        <Hero />
+        <Hero onScrollClick={() => handleNavLinkClick("about")} />
         <About ref={aboutSectionRef} />
         <Resume ref={resumeSectionRef} />
         <Contact ref={contactSectionRef} />

@@ -52,7 +52,7 @@
   &__header {
     @include font-size-3l;
 
-    margin-top: $spacing-3l;
+    margin-top: $spacing-lg;
     color: $color-black;
     font-family: $font-family-title;
     line-height: $line-height-sm;
@@ -112,6 +112,43 @@
 
       &:hover {
         color: $color-green-80;
+      }
+    }
+  }
+
+  &__scroll-button {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    bottom: $spacing-lg;
+    left: calc(50% - 24px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    background-color: $color-black;
+    border: 0;
+    border-radius: 50%;
+    font-size: $font-size-md;
+    opacity: 0.4;
+    transition: 250ms;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-green-40;
+      opacity: 1;
+    }
+
+    @media only screen and (min-height: 650px) {
+      display: flex;
+    }
+
+    .theme-dark & {
+      color: $color-black;
+      background-color: $color-white;
+
+      &:hover {
+        background-color: $color-green-80;
       }
     }
   }

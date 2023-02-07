@@ -4,7 +4,13 @@ import "./hero.scss";
 
 const bem = BEM("hero");
 
-function Hero() {
+interface Props {
+  onScrollClick: () => void;
+}
+
+function Hero(props: Props) {
+  const { onScrollClick } = props;
+
   return (
     <section className={bem()}>
       <div className={bem("image")}>
@@ -40,6 +46,13 @@ function Hero() {
           <i className="fa-brands fa-github"></i>
         </a>
       </div>
+      <button
+        className={bem("scroll-button")}
+        type="button"
+        onClick={onScrollClick}
+      >
+        <i className="fa-solid fa-angle-down"></i>
+      </button>
     </section>
   );
 }

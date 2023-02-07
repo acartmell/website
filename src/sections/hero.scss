@@ -142,6 +142,10 @@
     transition: $transition-fast;
     cursor: pointer;
 
+    > i {
+      margin-top: $spacing-3s;
+    }
+
     &:hover {
       background-color: $color-green-40;
       opacity: 1;

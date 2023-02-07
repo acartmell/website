@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { ThemeProvider } from "../contexts/theme-context";
 import { NavLink } from "../components/nav";
 import ErrorBoundary from "../components/error-boundary";
 import Page from "../components/page";
@@ -36,14 +37,16 @@ function IndexPage() {
   };
 
   return (
-    <ErrorBoundary>
-      <Page onNavLinkClick={handleNavLinkClick}>
-        <Hero onScrollClick={() => handleNavLinkClick("about")} />
-        <About ref={aboutSectionRef} />
-        <Resume ref={resumeSectionRef} />
-        <Contact ref={contactSectionRef} />
-      </Page>
-    </ErrorBoundary>
+    <ThemeProvider>
+      <ErrorBoundary>
+        <Page onNavLinkClick={handleNavLinkClick}>
+          <Hero onScrollClick={() => handleNavLinkClick("about")} />
+          <About ref={aboutSectionRef} />
+          <Resume ref={resumeSectionRef} />
+          <Contact ref={contactSectionRef} />
+        </Page>
+      </ErrorBoundary>
+    </ThemeProvider>
   );
 }
 

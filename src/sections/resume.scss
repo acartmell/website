@@ -5,6 +5,7 @@
 .resume {
   padding: $spacing-4l $spacing-3l;
   background-color: $color-white;
+  transition: $transition-fast;
 
   &__content {
     max-width: 920px;

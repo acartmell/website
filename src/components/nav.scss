@@ -1,4 +1,5 @@
 @use "../styles/tokens" as *;
+@use "../styles/mixins/media";
 @use "../styles/mixins/typography" as *;
 
 .nav {
@@ -20,7 +21,7 @@
     border-bottom: 1px solid $color-gray-80;
     box-shadow: 0px -6px 8px 1px $color-black;
     opacity: 0;
-    transition: 250ms;
+    transition: $transition-fast;
 
     .theme-dark & {
       background-color: $color-blue-20;
@@ -39,12 +40,12 @@
   &__link {
     @include font-size-3s;
 
-    margin-left: $spacing-lg;
+    margin-left: $spacing-2s;
     font-family: $font-family-title;
     color: $color-black;
     background-color: transparent;
     border: 0;
-    transition: 250ms;
+    transition: $transition-fast;
     cursor: pointer;
 
     &:hover {
@@ -60,11 +61,68 @@
       margin-left: 0;
     }
 
+    @include media.tablet {
+      margin-left: $spacing-lg;
+    }
+
     .theme-dark & {
       color: $color-white;
 
       &:hover {
         color: $color-green-80;
+      }
+    }
+  }
+
+  &__theme-button {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 6px;
+    right: $spacing-2s;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: $color-gray-20;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-size: $font-size-md;
+    transition: $transition-fast;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-gray-80;
+      border-color: $color-gray-50;
+    }
+
+    @include media.phone {
+      display: flex;
+
+      &_trigger_light {
+        display: none;
+      }
+
+      .theme-dark & {
+        &_trigger_dark {
+          display: none;
+        }
+
+        &_trigger_light {
+          display: flex;
+        }
+      }
+    }
+
+    @include media.tablet {
+      right: $spacing-md;
+    }
+
+    .theme-dark & {
+      color: $color-white;
+
+      &:hover {
+        background-color: $color-gray-20;
       }
     }
   }

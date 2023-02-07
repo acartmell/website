@@ -7,10 +7,11 @@
   background-color: $color-gray-95;
   border-top: 1px solid $color-gray-90;
   text-align: center;
+  transition: $transition-fast;
 
   a {
     color: inherit;
-    transition: 250ms;
+    transition: $transition-fast;
 
     &:hover {
       color: $color-green-40;

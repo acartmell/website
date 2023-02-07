@@ -1,6 +1,7 @@
 import React from "react";
 import BEM from "bem-cn";
 import useScrollListener from "../hooks/use-scroll-listener";
+import useThemeContext from "../hooks/use-theme-context";
 import "./nav.scss";
 
 const bem = BEM("nav");
@@ -13,6 +14,7 @@ interface Props {
 
 function Nav(props: Props) {
   const { onLinkClick } = props;
+  const { setTheme } = useThemeContext();
 
   const scrollY = useScrollListener();
   const opacity = Math.min(scrollY, 100);
@@ -52,6 +54,20 @@ function Nav(props: Props) {
           Contact
         </button>
       </div>
+      <button
+        className={bem("theme-button", { trigger: "dark" })}
+        type="button"
+        onClick={() => setTheme("dark")}
+      >
+        <i className="fa-solid fa-moon"></i>
+      </button>
+      <button
+        className={bem("theme-button", { trigger: "light" })}
+        type="button"
+        onClick={() => setTheme("light")}
+      >
+        <i className="fa-solid fa-sun"></i>
+      </button>
     </nav>
   );
 }

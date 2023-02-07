@@ -32,6 +32,7 @@
     opacity: 0.6;
     width: 100%;
     height: 100%;
+    transition: $transition-fast;
 
     .theme-dark & {
       background-color: $color-blue-15;
@@ -52,11 +53,16 @@
   &__header {
     @include font-size-3l;
 
-    margin-top: $spacing-lg;
+    margin-top: $spacing-3l;
     color: $color-black;
     font-family: $font-family-title;
     line-height: $line-height-sm;
     text-shadow: 2px 2px 1px $color-gray-80;
+    transition: $transition-fast;
+
+    @include media.tablet {
+      margin-top: $spacing-lg;
+    }
 
     .theme-dark & {
       color: $color-white;
@@ -72,10 +78,12 @@
     font-family: $font-family-body;
     line-height: $line-height-lg;
     letter-spacing: $letter-spacing-lg;
+    transition: $transition-fast;
 
     > strong {
       color: $color-green-20;
       font-weight: $font-weight-bold;
+      transition: $transition-fast;
     }
 
     .theme-dark & {
@@ -97,7 +105,7 @@
     margin-left: $spacing-2l;
     color: $color-black;
     font-size: $font-size-2l;
-    transition: 250ms;
+    transition: $transition-fast;
 
     &:first-child {
       margin-left: 0;
@@ -131,7 +139,7 @@
     border-radius: 50%;
     font-size: $font-size-md;
     opacity: 0.4;
-    transition: 250ms;
+    transition: $transition-fast;
     cursor: pointer;
 
     &:hover {

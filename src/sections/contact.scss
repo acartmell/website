@@ -4,6 +4,7 @@
 .contact {
   padding: $spacing-4l $spacing-3l;
   background-color: $color-blue-90;
+  transition: $transition-fast;
 
   &__content {
     max-width: 600px;
@@ -28,6 +29,7 @@
     display: flex;
     align-items: center;
     color: $color-green-20;
+    transition: $transition-fast;
 
     .theme-dark & {
       color: $color-green-60;
@@ -75,6 +77,7 @@
     background-color: $color-white;
     border: 1px solid $color-green-20;
     border-radius: 4px;
+    transition: $transition-fast;
 
     .theme-dark & {
       background-color: $color-gray-60;
@@ -87,6 +90,11 @@
 
     color: $color-red;
     font-family: $font-family-title;
+    transition: $transition-fast;
+
+    .theme-dark & {
+      color: $color-pink;
+    }
   }
 
   &__submit {
@@ -102,7 +110,7 @@
     border: 0;
     border-radius: 4px;
     cursor: pointer;
-    transition: 250ms;
+    transition: $transition-fast;
 
     &:hover {
       background-color: $color-green-40;

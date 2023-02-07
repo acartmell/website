@@ -7,11 +7,16 @@ function isSupported() {
 }
 
 function useSystemTheme() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-
   const systemThemeMatch = isSupported()
     ? window.matchMedia("(prefers-color-scheme: dark)")
     : null;
+
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    if (systemThemeMatch) {
+      return systemThemeMatch.matches ? "dark" : "light";
+    }
+    return "light";
+  });
 
   useEffect(() => {
     if (systemThemeMatch) {

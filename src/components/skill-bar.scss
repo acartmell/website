@@ -19,6 +19,7 @@
     background-color: $color-gray-80;
     border-radius: 4px;
     overflow: hidden;
+    transition: $transition-fast;
 
     .theme-dark & {
       background-color: $color-gray-20;
@@ -28,6 +29,7 @@
   &__fill {
     height: 100%;
     background-color: $color-gray-20;
+    transition: $transition-fast;
 
     .theme-dark & {
       background-color: $color-gray-60;

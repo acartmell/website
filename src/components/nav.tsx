@@ -19,19 +19,9 @@ function Nav(props: Props) {
   const scrollY = useScrollListener();
   const opacity = Math.min(scrollY, 100);
 
-  console.log({ opacity });
-
   return (
     <nav className={bem()}>
-      <div
-        className={bem("background")}
-        ref={(node) => {
-          if (node) {
-            // due to some weird React/Gatsby bug, normal inline styling doesn't work
-            node.style.setProperty("opacity", `${opacity / 100}`);
-          }
-        }}
-      />
+      <div className={bem("background")} style={{ opacity: opacity / 100 }} />
       <div className={bem("content")}>
         <button
           className={bem("link")}

@@ -1,5 +1,6 @@
 import React, { ReactNode, createContext, useState, useEffect } from "react";
 import useSystemTheme from "../hooks/use-system-theme";
+import useSsrPatch from "../hooks/use-ssr-patch";
 
 type Theme = "light" | "dark";
 
@@ -20,6 +21,7 @@ export const ThemeContext = createContext<ThemeContextData>({
 export function ThemeProvider(props: ProviderProps) {
   const { children } = props;
   const systemTheme = useSystemTheme();
+  const { ssrPatchKey } = useSsrPatch();
   const [theme, setTheme] = useState<Theme>(systemTheme);
 
   useEffect(() => {
@@ -28,7 +30,9 @@ export function ThemeProvider(props: ProviderProps) {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className={`theme-${theme}`}>{children}</div>
+      <div key={ssrPatchKey} className={`theme-${theme}`}>
+        {children}
+      </div>
     </ThemeContext.Provider>
   );
 }

@@ -9,7 +9,17 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-sass"],
+  plugins: [
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "G-J3QZSHBMDG",
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
+  ],
 };
 
 export default config;

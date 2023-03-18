@@ -21,8 +21,18 @@ function Hero(props: Props) {
         <p className={bem("subheader")}>
           I&apos;m a San Francisco-based <strong>Frontend Web Engineer</strong>{" "}
           with over 10 years of industry experience. I&apos;m currently working
-          as a freelance developer, and am <strong>open</strong> to taking on
-          new projects.
+          for{" "}
+          <strong>
+            <a
+              href="https://www.zabbleinc.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Zabble
+            </a>
+          </strong>
+          , building software to help hospitals, universities, and other
+          organizations get to Zero Waste.
         </p>
       </div>
       <div className={bem("social")}>

@@ -86,6 +86,10 @@
       transition: $transition-fast;
     }
 
+    a {
+      color: inherit;
+    }
+
     .theme-dark & {
       color: $color-white;
 

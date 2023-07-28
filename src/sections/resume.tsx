@@ -35,6 +35,31 @@ function Resume(_: Props, ref: ForwardedRef<HTMLElement>) {
           </h4>
           <div className={bem("section-content")}>
             <ResumeBlock
+              name="Zabble"
+              city="San Francisco, CA"
+              jobSpans={[
+                {
+                  job: "Senior Frontend Engineer",
+                  timespan: "Mar 2023 - Jul 2023 (Contract)",
+                },
+              ]}
+            >
+              <p>
+                Sole frontend web engineer on a lean startup team, responsible
+                for all feature development and maintenance of the Zabble Zero
+                web application. Quickly ramped up on the product, codebase, and
+                tech stack in order to provide as much value as possible during
+                a short four-month contract.
+              </p>
+              <p>
+                Designed, implemented, and rolled out multiple major features,
+                including a single sign-on authentication flow using SAML, bulk
+                editing of waste collection invoices, and a data import feature
+                allowing clients to bulk-upload facility and waste receptacle
+                data into their Zabble account.
+              </p>
+            </ResumeBlock>
+            <ResumeBlock
               name="WeWork"
               city="New York, NY"
               jobSpans={[

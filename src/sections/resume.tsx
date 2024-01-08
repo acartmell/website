@@ -46,17 +46,14 @@ function Resume(_: Props, ref: ForwardedRef<HTMLElement>) {
             >
               <p>
                 Sole frontend web engineer on a lean startup team, responsible
-                for all feature development and maintenance of the Zabble Zero
-                web application. Quickly ramped up on the product, codebase, and
-                tech stack in order to provide as much value as possible during
-                a short four-month contract.
-              </p>
-              <p>
-                Designed, implemented, and rolled out multiple major features,
-                including a single sign-on authentication flow using SAML, bulk
-                editing of waste collection invoices, and a data import feature
-                allowing clients to bulk-upload facility and waste receptacle
-                data into their Zabble account.
+                for all feature development and maintenance of the AI-powered
+                &quot;Zabble Zero&quot; web application. Quickly ramped up on
+                the product, codebase, and tech stack in order to provide as
+                much value as possible during a four-month contract. Designed,
+                implemented, and rolled out multiple major features, including a
+                single sign-on authentication flow using SAML, and a data import
+                feature allowing clients to bulk-upload facility and waste
+                receptacle data into their Zabble account.
               </p>
             </ResumeBlock>
             <ResumeBlock

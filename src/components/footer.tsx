@@ -56,7 +56,7 @@ function Footer() {
         .
       </div>
       <div className={bem("legal")}>
-        © 2023 Alex Cartmell <span className={bem("emoji")}>🌁</span>
+        © 2024 Alex Cartmell <span className={bem("emoji")}>🌁</span>
       </div>
     </footer>
   );

@@ -16,11 +16,11 @@ function PageHead(props: Props) {
       <meta name="og:url" content="https://www.alexcartmell.com" />
       <meta
         name="description"
-        content="Frontend web engineer with over 10 years of industry experience. Currently working as a freelance developer, and open to taking on new projects."
+        content="Frontend web engineer with over 10 years of industry experience. Currently working for Nextdoor in San Francisco."
       />
       <meta
         name="og:description"
-        content="Frontend web engineer with over 10 years of industry experience. Currently working as a freelance developer, and open to taking on new projects."
+        content="Frontend web engineer with over 10 years of industry experience. Currently working for Nextdoor in San Francisco."
       />
       <meta name="og:image" content={headshot} />
       <link rel="preconnect" href="https://fonts.googleapis.com" />

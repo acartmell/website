@@ -21,8 +21,18 @@ function Hero(props: Props) {
         <p className={bem("subheader")}>
           I&apos;m a San Francisco-based <strong>Frontend Web Engineer</strong>{" "}
           with over 10 years of industry experience. I&apos;m currently working
-          as a freelance developer, and am <strong>open</strong> to taking on
-          new projects.
+          at{" "}
+          <strong>
+            <a
+              href="https://about.nextdoor.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Nextdoor
+            </a>
+          </strong>
+          , building software to help people connect with their neighbors and
+          communities.
         </p>
       </div>
       <div className={bem("social")}>

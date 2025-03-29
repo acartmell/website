@@ -84,8 +84,7 @@ function Contact(_: Props, ref: ForwardedRef<HTMLElement>) {
         <h2 className={bem("title")}>Get in Touch</h2>
         <div className={bem("description")}>
           Interested in working together? Have a question? Feel free to use the
-          form below, or email me directly at{" "}
-          <a href="mailto:acartmell@gmail.com">acartmell@gmail.com</a>.
+          form below.
         </div>
         {isSuccess ? (
           <div className={bem("success-area")}>

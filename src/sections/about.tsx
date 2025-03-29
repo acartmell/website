@@ -33,9 +33,6 @@ function About(_: Props, ref: ForwardedRef<HTMLElement>) {
               <div className={bem("description")}>
                 <p>Alex Cartmell</p>
                 <p>San Francisco, California</p>
-                <p>
-                  <a href="mailto:acartmell@gmail.com">acartmell@gmail.com</a>
-                </p>
               </div>
             </div>
             <div className={bem("download-container")}>
